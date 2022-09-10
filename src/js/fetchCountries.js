@@ -10,7 +10,7 @@ export function fetchCountries(name) {
     return  fetch(`${BASE_URL}${name}?${config}`).then(resp => {
 
         if(!resp.ok) {
-            throw new Error('Oops, there is no country with that name');
+            throw new Error();
         }
         return resp.json()
     }).catch(error => Notiflix.Notify.failure('Oops, there is no country with that name'));
