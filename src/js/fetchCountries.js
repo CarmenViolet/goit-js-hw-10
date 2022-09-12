@@ -17,14 +17,14 @@ export function fetchCountries(name) {
 }
 
 export function markrupForCountriesList(response) {
- return   listOfCountries = response.reduce((acc, { name, flags }) => acc += `<li class="country-li">
+ return response.reduce((acc, { name, flags }) => acc += `<li class="country-li">
     <img src="${flags.svg}" alt="flags of countries"  width='30px'/>
     <h2 class="country-name">${name.official}</h2>
     </li>`, '')
 };
 
 export function markrupForCountriesInfo(response) {
- return   infoOfCountries = response.reduce((acc, {name, flags, capital, population, languages}) => acc += `<div class="main-info">
+ return response.reduce((acc, {name, flags, capital, population, languages}) => acc += `<div class="main-info">
     <img src="${flags.svg}" alt="flag of country" width="80"/>
     <h2>${name.official}</h2>
     </div>

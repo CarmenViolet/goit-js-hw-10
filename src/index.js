@@ -24,8 +24,6 @@ function searchingCountries(event) {
         if(response) {
             if (response.length > 10) {
                 Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
-            } else if(response.length === '') {
-                Notiflix.Notify.failure('Oops, there is no country with that name')
             } else if (response.length <= 10 && response.length >= 2) {
                 refs.countryList.innerHTML = markrupForCountriesList(response);
             } else if(response.length === 1) {
